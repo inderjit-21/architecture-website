@@ -1,0 +1,15 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: MainFont;
+  src: url('/fonts/Vilaka.ttf');
+}
+body {
+  position: relative;
+  font-family:Helvetica;
+}
+
+.MainFont{
+  font-family: MainFont;
+}
+
