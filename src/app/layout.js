@@ -3,6 +3,7 @@ import "./globals.css";
 import GlobalCanvas from "@/components/common/GlobalCanvas";
 import { AppProvider } from "@/context/AppContext";
 import SmoothScroll from "@/components/common/SmoothScroll";
+import NavBar from "@/components/common/NavBar";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -30,6 +31,7 @@ export default function RootLayout({ children }) {
           <AppProvider>
             <GlobalCanvas />
             {children}
+            <NavBar/>
           </AppProvider>
         </SmoothScroll>
       </body>
