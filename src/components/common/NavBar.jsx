@@ -104,8 +104,8 @@ const NavBar = () => {
   };
 
   return (
-    <div className="NavBar-MainCont w-full h-fit fixed top-0 py-7 left-0 z-100 flex justify-between items-center px-10">
-      <div className=" select-none cursor-pointer Font_Q text-[20px] leading-5 uppercase">
+    <div className="NavBar-MainCont w-full h-fit fixed top-0 py-7 left-0 z-100 flex justify-between items-center max-sm:px-5 px-10">
+      <div className=" select-none z-100 text-[#4d3526] mix-blend-difference cursor-pointer Font_Q text-[20px] leading-5 uppercase">
         DS
       </div>
 

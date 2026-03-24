@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useMemo, useRef } from "react";
+import React, { useEffect, useMemo, useRef, useState } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { OrbitControls, useTexture } from "@react-three/drei";
 import * as THREE from "three";
@@ -21,8 +21,23 @@ const imgData = [
   `/images/home/hero_imgs/img9.webp`,
 ];
 
-const HomeImageGallery = ({ radius = 1.5 }) => {
+const HomeImageGallery = () => {
   const groupRef = useRef();
+
+  const [radius, setRadius] = useState(1.5)
+    const [SCALE, setSCALE] = useState(1.5)
+
+  useEffect(()=>{
+    if(window.innerWidth < 1024){
+      setSCALE(1.0)
+      setRadius(0.9)
+    }
+    else{
+      setSCALE(1.5)
+      setRadius(1.5)
+    }
+  },[])
+
 
   const isIntro = useRef(true); // new
 
@@ -162,6 +177,7 @@ const HomeImageGallery = ({ radius = 1.5 }) => {
             position={[x, 0, z]}
             rotation={[0, -angle, 0]}
             scroll={scrollData}
+            SCALE={SCALE}
           />
         );
       })}
@@ -169,7 +185,7 @@ const HomeImageGallery = ({ radius = 1.5 }) => {
   );
 };
 
-function ImagePlane({ url, position, rotation, scroll, index }) {
+function ImagePlane({ url, position, rotation, scroll, index, SCALE }) {
   const texture = useTexture(url);
   const meshRef = useRef();
 
@@ -202,9 +218,11 @@ function ImagePlane({ url, position, rotation, scroll, index }) {
     SetSelectedImg(uurl);
   };
 
+
+
   return (
     <mesh
-      scale={1.5}
+      scale={SCALE}
       ref={meshRef}
       position={position}
       rotation={rotation}
