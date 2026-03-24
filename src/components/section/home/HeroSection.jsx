@@ -58,10 +58,15 @@ const HeroSection = () => {
 
     HomeIntroTL.from(".companytextlableCont", {
       bottom: "50%",
-      left:"50%",
-      translateX:"-50%",
-      translateY:"",
-      scale:0.5,
+      left: "50%",
+      translateX: "-50%",
+      translateY: "",
+      scale: 0.5,
+      duration: 1,
+      ease: "power3.inOut",
+    });
+    HomeIntroTL.to(".Doted_Div", {
+      opacity:1,
       duration: 1,
       ease: "power3.inOut",
     });
@@ -101,7 +106,7 @@ const HeroSection = () => {
         </div>
 
         {/* Display-Img-Container */}
-        <div className=" absolute bottom-2 right-2 w-1/4 aspect-3/2 max-lg:hidden">
+        <div className=" absolute bottom-6 right-6 w-1/4 aspect-3/2 max-lg:hidden border border-dotted Doted_Div opacity-0 border-[#4d352622]">
           {/* Previous Image */}
           {prev && (
             <img
@@ -118,6 +123,15 @@ const HeroSection = () => {
               className="absolute inset-0 w-full h-full object-cover"
             />
           )}
+
+          <div className="w-[104%] h-[105%] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2  z-[-1] flex justify-center   items-center ">
+            <div className="w-[10%] h-[10%] border-l border-t border-[#4d352641] border-dotted  absolute top-0 left-0"></div>
+            <div className="w-[10%] h-[10%] border-l border-b border-[#4d352641] border-dotted  absolute bottom-0 left-0 "></div>
+            <div className="w-[10%] h-[10%] border-r border-t border-[#4d352641] border-dotted  absolute top-0 right-0"></div>
+            <div className="w-[10%] h-[10%] border-r border-b border-[#4d352641] border-dotted  absolute bottom-0 right-0"></div>
+
+            <p className="Font_Q text-[#4d352622]">View Gallery</p>
+          </div>
         </div>
       </div>
     </div>
