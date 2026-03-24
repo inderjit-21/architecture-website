@@ -8,6 +8,7 @@ const NavBar = () => {
 
   const openRef = useRef(null);
   const closeRef = useRef(null);
+  const openMenu = useRef();
 
   const MenuChangerHandler = () => {
     const isOpen = !menuStatus;
@@ -49,7 +50,13 @@ const NavBar = () => {
             ease: "none",
           },
           "<",
-        );
+        )
+        .to(openMenu.current, {
+          clipPath: "inset(0% 0% 0% 0%)",
+          duration: 1,
+          ease: "power3.inOut",
+          pointerEvents: "auto",
+        },0);
     } else {
       tl.to(changerRef.current, {
         x: "-5%",
@@ -82,7 +89,15 @@ const NavBar = () => {
             ease: "none",
           },
           "<",
-        );
+        )
+        .to(openMenu.current, {
+          clipPath: "inset(0% 0% 100% 0%)",
+          duration: 1,
+          ease: "power3.inOut",
+          pointerEvents: "none",
+        },
+        0 
+      );
     }
 
     SetMenuStatus(isOpen);
@@ -90,11 +105,13 @@ const NavBar = () => {
 
   return (
     <div className="NavBar-MainCont w-full h-fit fixed top-0 py-7 left-0 z-100 flex justify-between items-center px-10">
-      <div className=" select-none cursor-pointer Font_Q">DS</div>
+      <div className=" select-none cursor-pointer Font_Q text-[20px] leading-5 uppercase">
+        DS
+      </div>
 
       <div
         onClick={MenuChangerHandler}
-        className="MenuCont select-none cursor-pointer Font_Q relative z-100 text-[14px] flex border border-[#4d352633] rounded-full p-1"
+        className="MenuCont select-none cursor-pointer Font_Q relative z-100 bg-[#efe6e1] text-[14px] flex border border-[#4d352633] rounded-full p-1"
       >
         <div
           ref={closeRef}
@@ -116,10 +133,11 @@ const NavBar = () => {
         </div>
       </div>
 
-      
-      <div className=" absolute top-0 left-0 w-full h-svh  z-99 pointer-events-none">
-
-      </div>
+      <div
+        ref={openMenu}
+        style={{ clipPath: "inset(0px 0px 100% 0px);" }}
+        className=" Open-Menu bg-[#422e22] absolute top-0 left-0 w-full h-svh  z-99 pointer-events-none"
+      ></div>
     </div>
   );
 };
