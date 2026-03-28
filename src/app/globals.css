@@ -4,6 +4,10 @@
   font-family: MainFont;
   src: url('/fonts/Vilaka.ttf');
 }
+@font-face {
+  font-family: SecFont;
+  src: url('/fonts/Viory.ttf');
+}
 body {
   position: relative;
   font-family:Helvetica;
@@ -11,6 +15,20 @@ body {
 
 .MainFont{
   font-family: MainFont;
+}
+.SecFont{
+ font-family: SecFont;
+}
+
+.MaintTextColor{
+  color: #4d3526;
+}
+.SecTextColor{
+  color: #4d3526b6;
+}
+
+.MainBgColor{
+  background-color: #4d3526;
 }
 
 

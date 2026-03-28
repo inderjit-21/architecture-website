@@ -2,6 +2,7 @@
 import { useAppContext } from "@/context/AppContext";
 import React, { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
+import { MdArrowOutward } from "react-icons/md";
 
 const HeroSection = () => {
   const { SelectedImg } = useAppContext();
@@ -66,7 +67,7 @@ const HeroSection = () => {
       ease: "power3.inOut",
     });
     HomeIntroTL.to(".Doted_Div", {
-      opacity:1,
+      opacity: 1,
       duration: 1,
       ease: "power3.inOut",
     });
@@ -132,6 +133,26 @@ const HeroSection = () => {
 
             <p className="Font_Q text-[#4d352622]">View Gallery</p>
           </div>
+        </div>
+
+        {/* Detail */}
+        <div className="w-1/5 h-fit absolute  top-1/4 -translate-y-1/2 left-[2%] max-sm:top-[20%] max-sm:left-0  max-sm:w-full max-sm:px-5 pointer-events-auto z-[90]">
+          <h2 className=" text-4xl leading-8 MaintTextColor font-medium uppercase MainFont">
+            Designing Spaces That Speak.
+          </h2>
+          <p className="SecFont SecTextColor text-[1.3rem] leading-[1.1rem] mt-2">
+            At Drop Studio, we craft thoughtful, modern architecture that blends
+            aesthetics, function, and emotion into every space we design.
+          </p>
+          
+        </div>
+
+        {/* GET in TUCH */}
+        <div className="w-1/5 h-fit absolute  top-2/5 -translate-y-1/2 right-[2%] max-sm:top-[70%] max-sm:left-1/2 max-sm:-translate-x-1/2  max-sm:w-2/3 max-sm:px-5">
+          <h2 className=" text-3xl max-sm:text-[1.5rem] leading-6 MaintTextColor font-medium uppercase MainFont max-sm:text-center ">
+            Share your vision, and we’ll help shape it into reality. 
+          </h2>
+          
         </div>
       </div>
     </div>
