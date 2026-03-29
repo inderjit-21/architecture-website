@@ -2,7 +2,7 @@
 import { useAppContext } from "@/context/AppContext";
 import React, { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
-import { MdArrowOutward } from "react-icons/md";
+import { BsArrow90DegRight } from "react-icons/bs";
 
 const HeroSection = () => {
   const { SelectedImg } = useAppContext();
@@ -66,11 +66,24 @@ const HeroSection = () => {
       duration: 1,
       ease: "power3.inOut",
     });
-    HomeIntroTL.to(".Doted_Div", {
-      opacity: 1,
-      duration: 1,
-      ease: "power3.inOut",
-    });
+    HomeIntroTL.to(
+      ".Doted_Div",
+      {
+        opacity: 1,
+        duration: 2,
+        ease: "power3.inOut",
+      },
+      "hero1",
+    );
+    HomeIntroTL.to(
+      ".HeroMainDetails",
+      {
+        opacity: 1,
+        duration: 2,
+        ease: "power3.inOut",
+      },
+      "hero1",
+    );
 
     return () => mm.revert();
   }, []);
@@ -136,24 +149,26 @@ const HeroSection = () => {
         </div>
 
         {/* Detail */}
-        <div className="w-1/5 h-fit absolute  top-1/4 -translate-y-1/2 left-[2%] max-sm:top-[20%] max-sm:left-0  max-sm:w-full max-sm:px-5 pointer-events-auto z-[90]">
-          <h2 className=" text-4xl leading-8 MaintTextColor font-medium uppercase MainFont">
+        <div className="w-1/5 h-fit absolute HeroMainDetails opacity-0 top-1/2 -translate-y-1/2 left-[2%] max-sm:top-[23%] max-sm:left-0  max-sm:w-full max-sm:px-5 pointer-events-auto z-[90]">
+          <h2 className=" text-4xl leading-8 max-sm:text-[2xl] max-sm:leading-7 MaintTextColor font-medium uppercase MainFont">
             Designing Spaces That Speak.
           </h2>
-          <p className="SecFont SecTextColor text-[1.3rem] leading-[1.1rem] mt-2">
+          <p className="SecFont SecTextColor text-[1.1rem] leading-[0.9rem] mt-2">
             At Drop Studio, we craft thoughtful, modern architecture that blends
             aesthetics, function, and emotion into every space we design.
           </p>
-          
         </div>
 
         {/* GET in TUCH */}
-        <div className="w-1/5 h-fit absolute  top-2/5 -translate-y-1/2 right-[2%] max-sm:top-[70%] max-sm:left-1/2 max-sm:-translate-x-1/2  max-sm:w-2/3 max-sm:px-5">
-          <h2 className=" text-3xl max-sm:text-[1.5rem] leading-6 MaintTextColor font-medium uppercase MainFont max-sm:text-center ">
-            Share your vision, and we’ll help shape it into reality. 
+        <div className="w-1/5 h-fit absolute HeroMainDetails opacity-0 top-[57%] -translate-y-1/2 right-[2%] max-sm:top-[72%] max-sm:left-1/2 max-sm:-translate-x-1/2  max-sm:w-2/3 max-sm:px-5">
+          <h2 className=" text-3xl leading-6 max-sm:text-[1.3rem] max-sm:leading-[1.2rem] MaintTextColor font-medium uppercase MainFont max-sm:text-center sm:text-end ">
+            Share your vision, and we’ll help shape it into reality.
           </h2>
-          
         </div>
+
+        {/* Scroll Info */}
+        <p className="SecFont absolute top-[15%] HeroMainDetails max-sm:top-[95%] max-sm:left-[85%] opacity-0 left-1/2 -translate-x-1/2 SecTextColor">[ Scroll ]</p>
+
       </div>
     </div>
   );

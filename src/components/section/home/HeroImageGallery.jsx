@@ -219,6 +219,11 @@ function ImagePlane({ url, position, rotation, scroll, index, SCALE }) {
   };
 
 
+  useEffect(()=>{
+    handleEnter(0)
+  },[])
+
+
 
   return (
     <mesh
