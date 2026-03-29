@@ -89,7 +89,7 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <div className="mainContHero w-full h-[300vh] relative bg-[#efe6e1] z-[-2]">
+    <div className="mainContHero w-full h-[300svh] relative bg-[#efe6e1] z-[-2]">
       <div className="stickyCont w-full h-[100svh] sticky top-0 left-0 overflow-hidden">
         {/* Company-Title */}
         <div className="companytextlableCont absolute bottom-0  opacity-0 text-[#4d3526] px-10 max-sm:px-5 flex max-sm:flex-col  tracking-tighter left-0 scale-[1]  w-fit h-fit  MainFont ">
