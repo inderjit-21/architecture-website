@@ -149,7 +149,7 @@ const HeroSection = () => {
         </div>
 
         {/* Detail */}
-        <div className="w-1/5 h-fit absolute HeroMainDetails opacity-0 top-1/2 -translate-y-1/2 left-[2%] max-sm:top-[23%] max-sm:left-0  max-sm:w-full max-sm:px-5 pointer-events-auto z-[90]">
+        <div className="w-1/5 h-fit absolute HeroMainDetails opacity-0 top-[20%] -translate-y-1/2 left-[2%] max-sm:top-[23%] max-sm:left-0  max-sm:w-full max-sm:px-5 pointer-events-auto z-[90]">
           <h2 className=" text-4xl leading-8 max-sm:text-[2xl] max-sm:leading-7 MaintTextColor font-medium uppercase MainFont">
             Designing Spaces That Speak.
           </h2>
@@ -160,7 +160,7 @@ const HeroSection = () => {
         </div>
 
         {/* GET in TUCH */}
-        <div className="w-1/5 h-fit absolute HeroMainDetails opacity-0 top-[57%] -translate-y-1/2 right-[2%] max-sm:top-[72%] max-sm:left-1/2 max-sm:-translate-x-1/2  max-sm:w-2/3 max-sm:px-5">
+        <div className="w-1/5 h-fit absolute HeroMainDetails opacity-0 top-[16%] -translate-y-1/2 right-[2%] max-sm:top-[72%] max-sm:left-1/2 max-sm:-translate-x-1/2  max-sm:w-2/3 max-sm:px-5">
           <h2 className=" text-3xl leading-6 max-sm:text-[1.3rem] max-sm:leading-[1.2rem] MaintTextColor font-medium uppercase MainFont max-sm:text-center sm:text-end ">
             Share your vision, and we’ll help shape it into reality.
           </h2>
